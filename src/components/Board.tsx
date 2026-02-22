@@ -47,7 +47,8 @@ function Board({ xIsNext, squares, onPlay, onGameOver, gameOverRecorded }: Board
 
   return (
     <>
-    // The Board component renders the status message and the 3x3 grid of Square components. Each Square receives its value and a click handler as props.
+    {/*The Board component renders the status message and the 3x3 grid of Square components. 
+    Each Square receives its value and a click handler as props.*/}
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
