@@ -2,6 +2,7 @@ import type { BoardProps } from '../types';
 import { calculateWinner } from '../utils/calculateWinner';
 import { isDraw } from '../utils/isDraw';
 import Square from './Square';
+import type { BoardState } from '../types';
 
 // The Board component now checks for a winner or a draw after each move and calls the onGameOver callback if the game has ended.
 function Board({ xIsNext, squares, onPlay, onGameOver, gameOverRecorded }: BoardProps) {
