@@ -1,32 +1,6 @@
 import { useState } from 'react';
 
-type Player = 'X' | 'O';
-type CellValue = Player | null;
-type BoardState = [
-  CellValue, CellValue, CellValue,
-  CellValue, CellValue, CellValue,
-  CellValue, CellValue, CellValue
-];
 
-interface GameStats {
-  X: number;
-  O: number;
-  draws: number;
-}
-
-interface SquareProps {
-  value: CellValue;
-  onSquareClick: () => void;
-}
-// BoardProps includes a new prop gameOverRecorded to track if the game over state has been recorded for the current game. This prevents multiple updates to the stats when a player wins or when there's a draw.
-
-interface BoardProps {
-  xIsNext: boolean;
-  squares: BoardState;
-  onPlay: (nextSquares: BoardState) => void;
-  onGameOver: (result: Player | 'draw') => void;
-  gameOverRecorded: boolean;
-}
 
 function Square({ value, onSquareClick }: SquareProps) {
   return (
