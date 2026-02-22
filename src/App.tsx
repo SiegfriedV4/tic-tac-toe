@@ -1,15 +1,5 @@
 import { useState } from 'react';
 
-
-
-function Square({ value, onSquareClick }: SquareProps) {
-  return (
-    <button className="square" onClick={onSquareClick}>
-      {value}
-    </button>
-  );
-}
-
 // The Board component now checks for a winner or a draw after each move and calls the onGameOver callback if the game has ended.
 function Board({ xIsNext, squares, onPlay, onGameOver, gameOverRecorded }: BoardProps) {
   function handleClick(i: number): void {
